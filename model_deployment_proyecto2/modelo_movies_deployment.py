@@ -12,7 +12,10 @@ def predict_genres(plot):
     clf = joblib.load(os.path.dirname(__file__) + '/movies_clf.pkl') 
     
     vect = CountVectorizer(max_features=1000)
-    XTest = vect.transform(plot)
+    d = {'plot': [plot]}
+    df = pd.DataFrame(data=d)
+    XTest = vect.transform(df)
+    
 
     #cols = ['p_Action', 'p_Adventure', 'p_Animation', 'p_Biography', 'p_Comedy', 'p_Crime', 'p_Documentary', 'p_Drama', 'p_Family',
     #    'p_Fantasy', 'p_Film-Noir', 'p_History', 'p_Horror', 'p_Music', 'p_Musical', 'p_Mystery', 'p_News', 'p_Romance',
