@@ -1027,10 +1027,10 @@ def predict_genres(plot):
 
     # Make prediction
     p1 = clf.predict(XTest)
-    
+    print(p1)
     #res = pd.DataFrame(p1 ,columns=cols)
 
-    return len(p1)
+    return p1
 
 
 if __name__ == "__main__":
@@ -1043,6 +1043,6 @@ if __name__ == "__main__":
         plot = sys.argv[1]
  
 
-        res = predict_genres(plot)
+        p1 = predict_genres(plot)
         
-        print('Géneros de la película: ', res)
+        print('Géneros de la película: ', p1)
