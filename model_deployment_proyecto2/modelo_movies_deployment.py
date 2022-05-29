@@ -1038,7 +1038,7 @@ def predict_genres(plot):
         if p1_df[i][0]==1:
             cadena = cadena + i + " "
 
-    return cadena
+    return p1
 
 
 if __name__ == "__main__":
