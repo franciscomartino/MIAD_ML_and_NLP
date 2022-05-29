@@ -1043,6 +1043,6 @@ if __name__ == "__main__":
         plot = sys.argv[1]
  
 
-        p1 = predict_genres(plot)
+        res = predict_genres(plot)
         
-        print('Géneros de la película: ', p1)
+        print('Géneros de la película: ', res)
