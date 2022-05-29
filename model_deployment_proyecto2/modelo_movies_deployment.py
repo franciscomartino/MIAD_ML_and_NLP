@@ -6,6 +6,7 @@ import sys
 import os
 from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.linear_model import RidgeClassifier
 
 def predict_genres(plot):
     
