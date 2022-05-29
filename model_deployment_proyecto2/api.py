@@ -2,7 +2,7 @@
 from flask import Flask
 from flask_restplus import Api, Resource, fields
 import joblib
-from modelo_movies_deployment import predict_price
+from modelo_movies_deployment import predict_genres
 
 app = Flask(__name__)
 

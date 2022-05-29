@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 import sys
 import os
-from xgboost import XGBClassifier
+from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
 from sklearn.feature_extraction.text import CountVectorizer
 
 def predict_genres(plot):
