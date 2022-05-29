@@ -7,6 +7,8 @@ import os
 from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import RidgeClassifier
+from sklearn.multioutput import MultiOutputClassifier
+from sklearn.linear_model import LogisticRegression
 
 def predict_genres(plot):
     
