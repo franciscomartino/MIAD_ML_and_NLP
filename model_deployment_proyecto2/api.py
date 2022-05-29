@@ -12,7 +12,7 @@ api = Api(
     title='Movies Genres Prediction API',
     description='Movies Genres Prediction API')
 
-ns = api.namespace('predict', 
+ns = api.namespace('predict_movies', 
      description='Genres Predictor')
    
 parser = api.parser()
