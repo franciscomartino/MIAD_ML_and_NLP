@@ -1029,7 +1029,7 @@ def predict_genres(plot):
     p1 = clf.predict(XTest)
     #res = pd.DataFrame(p1 ,columns=cols)
 
-    return p1
+    return str(p1)
 
 
 if __name__ == "__main__":
