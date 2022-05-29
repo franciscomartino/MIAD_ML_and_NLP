@@ -1030,7 +1030,7 @@ def predict_genres(plot):
     
     #res = pd.DataFrame(p1 ,columns=cols)
 
-    return p1[0]
+    return p1[3]
 
 
 if __name__ == "__main__":
