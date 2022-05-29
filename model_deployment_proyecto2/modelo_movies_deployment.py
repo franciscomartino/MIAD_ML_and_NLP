@@ -1018,7 +1018,10 @@ def predict_genres(plot):
     
     d = {'plot': [plot]}
     df = pd.DataFrame(data=d)
-    XTest = vect.transform(df)
+    
+    prueba = df.loc[:, 'plot']
+    
+    XTest = vect.transform(prueba)
     
 
     cols = ['p_Action', 'p_Adventure', 'p_Animation', 'p_Biography', 'p_Comedy', 'p_Crime', 'p_Documentary', 'p_Drama', 'p_Family',
@@ -1027,9 +1030,15 @@ def predict_genres(plot):
 
     # Make prediction
     p1 = clf.predict(XTest)
-    #res = pd.DataFrame(p1 ,columns=cols)
+    p1_df = pd.DataFrame(p1 ,columns=cols)
+    
+    cadena = ""
+    
+    for i in p1_df.columns:
+        if p1_df[i][0]==1:
+            cadena = cadena + i + " "
 
-    return p1
+    return cadena
 
 
 if __name__ == "__main__":
