@@ -14,7 +14,7 @@ def predict_genres(plot):
     vect = CountVectorizer(max_features=1000)
     d = {'plot': [plot]}
     df = pd.DataFrame(data=d)
-    XTest = vect.transform(df)
+    XTest = vect.fit_transform(df)
     
 
     #cols = ['p_Action', 'p_Adventure', 'p_Animation', 'p_Biography', 'p_Comedy', 'p_Crime', 'p_Documentary', 'p_Drama', 'p_Family',
