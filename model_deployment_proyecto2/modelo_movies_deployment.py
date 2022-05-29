@@ -1027,7 +1027,6 @@ def predict_genres(plot):
 
     # Make prediction
     p1 = clf.predict(XTest)
-    print(p1)
     #res = pd.DataFrame(p1 ,columns=cols)
 
     return p1
